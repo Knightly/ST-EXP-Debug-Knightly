@@ -59,6 +59,21 @@ template<class T> class vector_tpl
 		}
 
 		/**
+		 * Initialise a vector by removing the existing array and creating a new array, as well as updating count
+		 * CAUTION : Existing elements are removed and new elements may not be properly initialised
+		 */
+		void init_with_new_elements(const uint32 elem_count)
+		{
+			if(  size>0  ) {
+				delete[] data;
+				data = NULL;
+				count = size = 0;
+			}
+			resize( elem_count );
+			count = elem_count;
+		}
+
+		/**
 		 * Checks if element elem is contained in vector.
 		 * Uses the == operator for comparison.
 		 */

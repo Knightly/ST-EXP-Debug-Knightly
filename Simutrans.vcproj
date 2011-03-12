@@ -1142,6 +1142,10 @@
 				RelativePath=".\dings\zeiger.cc"
 				>
 			</File>
+			<File
+				RelativePath=".\gui\factory_chart.cc"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -2318,6 +2322,10 @@
 			</File>
 			<File
 				RelativePath=".\dings\zeiger.h"
+				>
+			</File>
+			<File
+				RelativePath=".\gui\factory_chart.h"
 				>
 			</File>
 		</Filter>
