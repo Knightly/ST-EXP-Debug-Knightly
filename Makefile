@@ -23,6 +23,7 @@ ifeq ($(BACKEND), x11)
   $(warning ATTENTION: X11 backend is broken)
 endif
 
+CFLAGS += -std=c++0x
 
 ifeq ($(OSTYPE),amiga)
   STD_LIBS ?= -lz -lbz2 -lunix -lpthread -lSDL_mixer -lsmpeg -lvorbisfile -lvorbis -logg
