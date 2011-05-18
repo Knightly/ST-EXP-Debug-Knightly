@@ -164,27 +164,27 @@ public:
 
 
 // global arithmetic operators
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, fixed_point_t<T, P> >::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, fixed_point_t<T, P> >::type
 	operator + (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) += fp_value; }
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, fixed_point_t<T, P> >::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, fixed_point_t<T, P> >::type
 	operator - (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) -= fp_value; }
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, fixed_point_t<T, P> >::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, fixed_point_t<T, P> >::type
 	operator * (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) *= fp_value; }
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, fixed_point_t<T, P> >::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, fixed_point_t<T, P> >::type
 	operator / (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) /= fp_value; }
 
 // global relational operators
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, bool>::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, bool>::type
 	operator > (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) > fp_value; }
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, bool>::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, bool>::type
 	operator < (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) < fp_value; }
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, bool>::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, bool>::type
 	operator >= (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) >= fp_value; }
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, bool>::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, bool>::type
 	operator <= (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) <= fp_value; }
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, bool>::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, bool>::type
 	operator == (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) == fp_value; }
-template<typename V, typename T, sint32 P> typename enable_if<is_arithmetic<V>::value, bool>::type
+template<typename V, typename T, sint32 P> inline typename enable_if<is_arithmetic<V>::value, bool>::type
 	operator != (const V value, const fixed_point_t<T, P> &fp_value) { return fixed_point_t<T, P>(value) != fp_value; }
 
 
